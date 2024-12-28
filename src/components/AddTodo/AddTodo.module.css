@@ -1,0 +1,76 @@
+.addTodoTitle {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+@media (min-width: 768px) {
+  .addTodoTitle {
+    font-size: 1rem;
+  }
+}
+.addTodoTitle:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.addTodoNotes {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  resize: vertical;
+  min-height: 80px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .addTodoNotes {
+    font-size: 1rem;
+  }
+}
+.addTodoNotes:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.addTodoActions {
+  display: flex;
+  justify-content: space-between;
+}
+.addTodoButton {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .addTodoButton {
+    font-size: 1rem;
+  }
+}
+.addTodoButtonPrimary {
+  background-color: var(--primary-dark);
+  color: var(--background);
+}
+.addTodoButtonPrimary:hover {
+  background-color: var(--primary);
+}
+.addTodoButtonSecondary {
+  background-color: var(--background);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.addTodoButtonSecondary:hover {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+}
