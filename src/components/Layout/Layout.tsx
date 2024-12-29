@@ -9,7 +9,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  //const [todoList, setTodoList] = useState<Todo[]>([]);
+
   return (
     <div className={styles.layout}>
       <div className={styles.todoListContainer}>

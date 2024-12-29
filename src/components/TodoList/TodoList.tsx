@@ -1,6 +1,9 @@
 import { useState } from "react";
 import TodoItem from "../TodoItem/TodoItem";
 import styles from "./TodoList.module.css";
+import { useSelector } from "react-redux";
+import { RootState } from "../../features/store";
+
 export type Todo = {
   id: number;
   title: string;
@@ -8,30 +11,11 @@ export type Todo = {
   completed: boolean;
 };
 
-const TodoListData: Todo[] = [
-  {
-    id: 1,
-    title: "Complete project documentation",
-    notes: "Include API specs and deployment guide",
-    completed: false,
-  },
-  {
-    id: 2,
-    title: "Schedule team meeting",
-    notes: "Discuss Q4 roadmap and priorities",
-    completed: true,
-  },
-  {
-    id: 3,
-    title: "Update dependencies",
-    notes: "Check for security patches and new features",
-    completed: false,
-  },
-];
 const TodoList: React.FC = () => {
-  const [todos] = useState<Todo[]>(TodoListData);
+  const { todos } = useSelector((state: RootState) => state.todos);
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [activeId, setActiveId] = useState<number | null>(null);
+
   const onExpand = (id: number): void => {
     if (id === expandedId) {
       setExpandedId(null);
@@ -46,6 +30,7 @@ const TodoList: React.FC = () => {
       setActiveId(id);
     }
   };
+
   return (
     <ul className={styles.todoList}>
       {todos.map((item) => (
