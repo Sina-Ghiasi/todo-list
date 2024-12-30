@@ -3,14 +3,15 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import TodoList from "./components/TodoList/TodoList";
 import store from "./features/store";
-import { Toaster } from "react-hot-toast";
+import ToasterManager from "./components/ToastManager/ToasterManager";
+
 const App = () => {
   return (
     <Provider store={store}>
       <Layout>
         <TodoList />
       </Layout>
-      <Toaster />
+      <ToasterManager maxVisibleToasts={1} />
     </Provider>
   );
 };
