@@ -99,7 +99,7 @@ const notifyTodoStatus = (todo: Todo, todos: Todo[]) => {
         .filter((item: Todo) => item.id !== todo.id)
         .every((item: Todo) => item.completed)
     ) {
-      toast("You’ve crushed it! Great job!", {
+      toast("You’ve crushed it!", {
         icon: "🏆",
       });
     } else {

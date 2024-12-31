@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import todosReducer, { TodosState } from "./todos/todosSlice";
+import themeReducer, { ThemeState } from "./theme/themeSlice";
 
 const loadState = (): RootState | undefined => {
   try {
@@ -27,6 +28,7 @@ const preloadedState = loadState();
 const store = configureStore({
   reducer: {
     todos: todosReducer,
+    theme: themeReducer,
   },
   preloadedState,
 });
@@ -37,6 +39,7 @@ store.subscribe(() => {
 
 export type RootState = {
   todos: TodosState;
+  theme: ThemeState;
 };
 export type AppDispatch = typeof store.dispatch;
 

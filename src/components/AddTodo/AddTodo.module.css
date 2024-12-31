@@ -54,7 +54,7 @@
 }
 .addTodoButtonPrimary {
   background-color: var(--primary-dark);
-  color: var(--background);
+  color: var(--text-button);
 }
 .addTodoButtonPrimary:hover {
   background-color: var(--primary);

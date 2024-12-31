@@ -17,7 +17,16 @@ const ToasterManager: React.FC<ToasterManagerProps> = ({
       .forEach((t) => toast.dismiss(t.id));
   }, [toasts, maxVisibleToasts]);
 
-  return <Toaster />;
+  return (
+    <Toaster
+      toastOptions={{
+        style: {
+          backgroundColor: "var(--background)",
+          color: "var(--text-primary)",
+        },
+      }}
+    />
+  );
 };
 
 export default ToasterManager;

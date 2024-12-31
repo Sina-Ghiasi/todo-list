@@ -26,8 +26,7 @@
 }
 .addTodoButton {
   background-color: var(--primary-dark);
-  color: var(--background);
-  border: none;
+  color: var(--text-button);
   padding: 8px 15px;
   font-size: 1rem;
   border-radius: 4px;

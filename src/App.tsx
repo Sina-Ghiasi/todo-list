@@ -1,9 +1,10 @@
-import { Provider } from "react-redux";
 import "./App.css";
+import { Provider } from "react-redux";
 import Layout from "./components/Layout/Layout";
 import TodoList from "./components/TodoList/TodoList";
 import store from "./features/store";
 import ToasterManager from "./components/ToastManager/ToasterManager";
+import ThemeSetter from "./components/ThemeSetter/ThemeSetter";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <TodoList />
       </Layout>
       <ToasterManager maxVisibleToasts={1} />
+      <ThemeSetter />
     </Provider>
   );
 };
